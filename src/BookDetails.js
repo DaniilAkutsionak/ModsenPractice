@@ -12,7 +12,7 @@ function BookDetails() {
         const response = await axios.get(`https://www.googleapis.com/books/v1/volumes/${bookId}?key=AIzaSyAp_SEVuEBh_sl5m5zwDEbLclu-D8k1Q2w`);
         setBook(response.data);
       } catch (err) {
-        console.error("Error loading the book details:", err);
+        console.error("Ошибка при загрузке информации о книге:", err);
       }
     };
 
@@ -32,8 +32,8 @@ function BookDetails() {
         />
       </div>
       <div className="book-info">
-        <p><strong>Author(s):</strong> {book.volumeInfo.authors ? book.volumeInfo.authors.join(', ') : 'No authors available'}</p>
-        <p><strong>Categories:</strong> {book.volumeInfo.categories ? book.volumeInfo.categories.join(', ') : 'No categories available'}</p>
+        <p><strong>Author(s):</strong> {book.volumeInfo.authors ? book.volumeInfo.authors.join(', ') : 'Нет авторов'}</p>
+        <p><strong>Categories:</strong> {book.volumeInfo.categories ? book.volumeInfo.categories.join(', ') : 'Нет категорий'}</p>
         <p>{book.volumeInfo.description}</p>
       </div>
     </div>

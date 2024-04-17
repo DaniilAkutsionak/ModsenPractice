@@ -1,4 +1,4 @@
-/* Сброс стилей и общие стили */
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -20,7 +20,7 @@ body {
   padding: 0 20px;
 }
 
-/* Стили для поиска и списка книг */
+
 .book-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -47,7 +47,7 @@ body {
   text-align: center;
 }
 
-/* Стили для кнопки 'Load more' */
+
 .load-more {
   display: block;
   width: 100%;
@@ -64,7 +64,7 @@ body {
   background: #0056b3;
 }
 
-/* Стили для формы поиска */
+
 .search-form {
   margin: 20px 0;
   display: flex;
@@ -92,7 +92,7 @@ body {
   background: #0056b3;
 }
 
-/* Стили для страницы деталей книги */
+
 .book-details-container {
   display: flex;
   margin-top: 20px;
@@ -129,7 +129,7 @@ body {
   margin-bottom: 10px;
 }
 
-/* Дополнительные стили */
+
 strong {
   font-weight: bold;
 }
