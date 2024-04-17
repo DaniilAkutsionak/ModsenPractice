@@ -1,24 +1,20 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import SearchBooks from './SearchBooks';
+import BookDetails from './BookDetails';
 import './App.css';
 
 function App() {
+  const [books, setBooks] = useState([]);
+  const [startIndex, setStartIndex] = useState(0);
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<SearchBooks books={books} setBooks={setBooks} startIndex={startIndex} setStartIndex={setStartIndex} />} />
+        <Route path="/book/:bookId" element={<BookDetails />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
